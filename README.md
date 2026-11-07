@@ -23,10 +23,10 @@ repositories get a link; private ones are listed by name only. Ridgwell Status i
 
 ## Versioning
 
-This project is **pre-stable** and uses [Semantic Versioning](https://semver.org) on `0.x.y` (tags `v0.x.y`). Its
-first stable release will be its first [Date Versioning](https://datevers.ing) release: the UTC release date as
-`YY.MM.DD`, with `-1`, `-2`… for later releases the same day, and every release after it stays on Date Versioning.
-There is no `1.0.0`. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
+This project is **stable** and uses [Date Versioning](https://datevers.ing): each release is its UTC release date as
+`YY.MM.DD` (tag `vYY.MM.DD`), with `-1`, `-2`… for later releases the same day. v26.11.07 was its first stable
+release; before it, v0.1.0 was pre-stable, on [Semantic Versioning](https://semver.org) `0.x.y`. There is no
+`1.0.0`, and it never goes back. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
 ## License
 
