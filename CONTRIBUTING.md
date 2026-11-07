@@ -19,6 +19,6 @@ issues.
 5. Run `./commit.sh` (or `commit.bat`): it checks the version, commits and tags `vX`, and never pushes.
 6. `git push origin test`, then `git push origin vX`, and open a pull request from `test` into `main`.
 
-While pre-stable, versions are `0.x.y`. The first stable release is a Date Version (`YY.MM.DD`, UTC, never in the
-future) instead of `1.0.0`, and every release from then on is too; the commit scripts and `tests/version.sh` enforce
-both.
+Versions are Date Versions (`YY.MM.DD`, the UTC release date, never in the future, with `-1`, `-2`… for later
+releases the same day). The project has been stable since v26.11.07, its first Date Version, and never goes back to
+`0.x.y`; the commit scripts and `tests/version.sh` enforce both.
