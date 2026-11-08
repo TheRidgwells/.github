@@ -20,7 +20,7 @@ The family's websites, and the setup behind them. Everything we run is listed at
 | 💬 [Ridgwell Social](https://social.ridgwell.family) | The family's own corner of the Fediverse (coming soon) |
 | 🗂️ [The Ridgwell Archives](https://archives.ridgwell.network) | The family's retired websites and projects, archived |
 | 📋 [The Ridgwell Family Projects](https://projects.ridgwell.family) | All the family's sites and projects, in one place ([source](https://github.com/TheRidgwells/Projects)) |
-| 🚦 [Ridgwell Status](https://status.ridgwell.family) | Live status of the family's websites, checked every 5 minutes ([source](https://github.com/TheRidgwells/Status)) |
+| 🚦 [Ridgwell Status](https://status.ridgwell.family) | Live status of the family's websites, checked regularly ([source](https://github.com/TheRidgwells/Status)) |
 
 ### Behind the Scenes
 
