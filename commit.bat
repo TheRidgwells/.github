@@ -35,6 +35,17 @@ if errorlevel 4 (
     exit /b 1
 )
 
+REM Releases are made on test (or a branch off it). staging and main only change through pull requests:
+REM test -> staging -> main (CONTRIBUTING.md, "Branches and going live").
+for /f "delims=" %%b in ('git rev-parse --abbrev-ref HEAD') do set "BRANCH=%%b"
+if "%BRANCH%"=="main" goto wrongbranch
+if "%BRANCH%"=="staging" goto wrongbranch
+goto branchok
+:wrongbranch
+echo You're on %BRANCH%. Releases are made on test, then go test -^> staging -^> main through pull requests: git switch test
+exit /b 1
+:branchok
+
 git add -A
 git diff --cached --quiet
 if errorlevel 1 (
@@ -51,4 +62,6 @@ if errorlevel 1 (
     echo Tag v%VERSION% already exists - skipping.
 )
 
-echo Push with: git push origin test, then git push origin v%VERSION%, then open a pull request from test into main.
+echo Push with: git push origin %BRANCH% --tags
+echo Then open a pull request into staging: gh pr create --base staging --head %BRANCH%
+echo Once staging is checked, open one from staging into main: gh pr create --base main --head staging
