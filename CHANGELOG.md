@@ -6,6 +6,11 @@ Removed, Security, Deprecated. It uses [Date Versioning](https://datevers.ing) (
 releases the same day) since v26.11.07, its first stable release; v0.1.0 was pre-stable, on
 [Semantic Versioning](https://semver.org) `0.x.y`.
 
+## v26.11.15
+
+### Changed
+- **Branches: `test` → `staging` → `main`.** Releases are still made on `test`, and now go live through two pull requests: `test` into `staging`, then `staging` into `main`. Nothing is pushed to `staging` or `main` directly. `commit.sh` / `commit.bat` refuse to run on `staging` or `main`, and print the push (`git push origin test --tags`) and both `gh pr create` commands. CONTRIBUTING.md describes it in "Branches and going live".
+
 ## v26.11.08
 
 ### Changed
